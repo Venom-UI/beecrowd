@@ -2,22 +2,13 @@
 
 int main()
 {
-    double input, average = 0.0;
-    int positive = 0;
+    int starth, finalh,totalh;
+    scanf("%d %d", &starth, &finalh);
 
-    for (int i = 0; i < 6; i++)
-    {
-        scanf("%lf", &input);
-        if (input > 0)
-        {
-            positive += 1;
-            average += input;
-        }
-    }
+    totalh = finalh - starth;
 
-    average /= positive;
+    totalh += (totalh <= 0) * 24;
 
-    printf("%d valores positivos\n", positive);
-    printf("%.1f\n", average);
+    printf("O JOGO DUROU %d HORA(S)\n", totalh);
     return 0;
 }
